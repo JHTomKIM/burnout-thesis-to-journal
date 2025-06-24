@@ -35,6 +35,7 @@ C:.
 ¦¢      Share of Compliance.png
 ¦¢      
 ¦§¦¡final_tables
+¦¢      cluster_work.csv
 ¦¢      est0.csv
 ¦¢      est00.csv
 ¦¢      est10.csv
@@ -56,25 +57,46 @@ C:.
 ¦¢      
 ¦§¦¡R
 ¦¢      plot_clustering_process.R
+¦¢      table_export.R
 ¦¢      
-¦¦¦¡raw_tables
-        comparison.csv
-        detailed_comparison.csv
-        detailed_comparison_1.csv
-        detailed_dummy_comparison.csv
-        feologit.csv
-        feologitr.csv
-        feologit_3.csv
-        feologit_general.csv
-        fullyquad_1.csv
-        fullyquad_3.csv
-        lbsresultcluster.csv
-        lbsresult_.csv
-        simple2SPS.csv
-        stage1.1.csv
-        stage1_.csv
-        stage1_cluster.csv
-        stage1_cluster_int.csv
-        stage1_comparison.csv
-        stage1_comparison_.csv
+¦§¦¡raw_tables
+¦¢      comparison.csv
+¦¢      detailed_comparison.csv
+¦¢      detailed_comparison_1.csv
+¦¢      detailed_dummy_comparison.csv
+¦¢      feologit.csv
+¦¢      feologitr.csv
+¦¢      feologit_3.csv
+¦¢      feologit_general.csv
+¦¢      fullyquad_1.csv
+¦¢      fullyquad_3.csv
+¦¢      lbsresultcluster.csv
+¦¢      lbsresult_.csv
+¦¢      simple2SPS.csv
+¦¢      stage1.1.csv
+¦¢      stage1_.csv
+¦¢      stage1_cluster.csv
+¦¢      stage1_cluster_int.csv
+¦¢      stage1_comparison.csv
+¦¢      stage1_comparison_.csv
+¦¢      
+¦¦¦¡table_tex
+        Table1.tex
+        Table10.tex
+        Table11.tex
+        Table12.tex
+        Table13.tex
+        Table2.tex
+        Table3.tex
+        Table4.tex
+        Table5.tex
+        Table6.tex
+        Table7.tex
+        Table8.tex
+        Table9.tex
+        TableA1.tex
+        TableA2.tex
+        TableA3.tex
+        TableA4.tex
+        TableA5.tex
         
