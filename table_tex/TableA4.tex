@@ -1,0 +1,70 @@
+\begin{table}[!h]
+\centering\centering
+\caption{Decomposition of Working Hours into Daily Hours and Workdays (Equation 4.4a)}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{10.5}{12.5}\selectfont
+\begin{threeparttable}
+\begin{tabular}[t]{lcccc}
+\toprule
+Variable & (1) & (2) & (3) & (4)\\
+\midrule
+Main Explatory Variable &  &  &  & \\
+\hline\noalign{\vskip -0.1ex}\\
+Daily Working Hours & -0.0440*** & 0.1080** & -0.0489*** & 0.0642\\
+ & (0.0104) & (0.0346) & (0.0104) & (0.0354)\\
+Daily Working Hours (Squared) &  & -0.0077*** &  & -0.0057***\\
+ &  & (0.0017) &  & (0.0017)\\
+\addlinespace
+Weekly Working Days & 0.0028 & 0.0051 & 0.7964*** & 0.7171***\\
+ & (0.0218) & (0.0217) & (0.1166) & (0.1192)\\
+Weekly Working Days (Squared) &  &  & -0.0766*** & -0.0688***\\
+ &  &  & (0.0110) & (0.0112)\\
+\hline\noalign{\vskip -0.1ex}
+Control Variable &  &  &  & \\
+\hline\noalign{\vskip -0.1ex}\\
+\addlinespace
+Hourly Wage & 0.0493*** & 0.0507*** & 0.0492*** & 0.0502***\\
+ & (0.0046) & (0.0045) & (0.0046) & (0.0045)\\
+Age & 0.0075 & 0.0068 & 0.0056 & 0.0053\\
+ & (0.0055) & (0.0054) & (0.0055) & (0.0054)\\
+Years of Education & -0.1022 & -0.1073 & -0.1060 & -0.1094\\
+\addlinespace
+ & (0.0579) & (0.0579) & (0.0584) & (0.0583)\\
+Household Size & -0.0683** & -0.0685** & -0.0692** & -0.0692**\\
+ & (0.0243) & (0.0243) & (0.0243) & (0.0243)\\
+Marital Status & 0.1355 & 0.1406* & 0.1351 & 0.1391*\\
+ & (0.0702) & (0.0701) & (0.0701) & (0.0701)\\
+\addlinespace
+Household Income & 0.0002 & 0.0002 & 0.0002 & 0.0002\\
+ & (0.0002) & (0.0002) & (0.0002) & (0.0002)\\
+Temporary Contract & -0.1427*** & -0.1356*** & -0.1404*** & -0.1356***\\
+ & (0.0388) & (0.0389) & (0.0389) & (0.0389)\\
+Atypical Contract & -0.2968*** & -0.2889*** & -0.2707*** & -0.2676***\\
+\addlinespace
+ & (0.0547) & (0.0546) & (0.0548) & (0.0547)\\
+Paid Vacation Provided & 0.2989*** & 0.2918*** & 0.2897*** & 0.2853***\\
+ & (0.0334) & (0.0334) & (0.0334) & (0.0334)\\
+Public-Sector Employer & 0.3104*** & 0.3107*** & 0.3062*** & 0.3068***\\
+ & (0.0788) & (0.0785) & (0.0792) & (0.0790)\\
+\addlinespace
+Years of Tenure & -0.0078 & -0.0089 & -0.0081 & -0.0088\\
+ & (0.0047) & (0.0047) & (0.0047) & (0.0047)\\
+\hline\noalign{\vskip -0.1ex}
+Pseudo-Observations & 658624 & 658624 & 658624 & 658624\\
+Observations & 49643 & 49643 & 49643 & 49643\\
+Number of Individuals & 9368 & 9368 & 9368 & 9368\\
+\addlinespace
+Pseudo R-Squared & 0.6250 & 0.6253 & 0.6256 & 0.6257\\
+Log conditional Likelihood & -104177.4 & -104104.2 & -104022.8 & -103984.3\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item[1] All coefficients are expressed in log-odds. Standard errors clustered at the individual level are reported in parentheses.
+\item[2] Expanded through BUC-OLOGIT estimation (Baetschmann et al., 2020).
+\item[3] Observations with multiple positive outcomes within groups are excluded due to identification constraints.
+\item[4] All models control for industry, occupational category, firm region, and firm size.
+\item[5] * p<0.05, ** p<0.01,  *** p<0.001
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}

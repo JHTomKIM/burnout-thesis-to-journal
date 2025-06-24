@@ -1,0 +1,67 @@
+\begin{table}[!h]
+\centering\centering
+\caption{Relationship between Weekly Working Hours and Job Satisfaction (Equation 4.4 and 4.5)}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{11}{13}\selectfont
+\begin{threeparttable}
+\begin{tabular}[t]{lcccc}
+\toprule
+Variable & (1) & (2) & (3) & (4)\\
+\midrule
+Main Explanatory Variable &  &  &  & \\
+\hline\noalign{\vskip -0.1ex}\\
+Overtime Worker X Weekly Working Hours &  &  & -0.0027** & -0.0019*\\
+ &  &  & (0.0009) & (0.0009)\\
+Weekly Working Hours & -0.0068*** & 0.0522*** & -0.0012 & 0.0546***\\
+ & (0.0020) & (0.0081) & (0.0027) & (0.0080)\\
+\addlinespace
+Weekly Working Hours (Squared) &  & -0.0006*** &  & -0.0006***\\
+ &  & (0.0001) &  & (0.0001)\\
+\hline\noalign{\vskip -0.1ex}
+Control Variable &  &  &  & \\
+\hline\noalign{\vskip -0.1ex}\\
+Hourly Wage & 0.0489*** & 0.0513*** & 0.0485*** & 0.0510***\\
+ & (0.0046) & (0.0044) & (0.0046) & (0.0043)\\
+\addlinespace
+Age & 0.0062 & 0.0042 & 0.0049 & 0.0034\\
+ & (0.0055) & (0.0054) & (0.0054) & (0.0054)\\
+Years of Education & -0.1000 & -0.1114 & -0.1012 & -0.1118\\
+ & (0.0575) & (0.0578) & (0.0575) & (0.0579)\\
+Household Size & -0.0679** & -0.0686** & -0.0682** & -0.0689**\\
+\addlinespace
+ & (0.0243) & (0.0243) & (0.0243) & (0.0243)\\
+Marital Status & 0.1349 & 0.1419* & 0.1356 & 0.1422*\\
+ & (0.0703) & (0.0700) & (0.0703) & (0.0700)\\
+Household Income & 0.0002 & 0.0002 & 0.0002 & 0.0002\\
+ & (0.0002) & (0.0002) & (0.0002) & (0.0002)\\
+\addlinespace
+Temporary Contract & -0.1458*** & -0.1340*** & -0.1443*** & -0.1331***\\
+ & (0.0388) & (0.0388) & (0.0389) & (0.0388)\\
+Atypical Contract & -0.3117*** & -0.2866*** & -0.3076*** & -0.2841***\\
+ & (0.0547) & (0.0546) & (0.0547) & (0.0546)\\
+Paid Vacation Provided & 0.2979*** & 0.2773*** & 0.2914*** & 0.2732***\\
+\addlinespace
+ & (0.0334) & (0.0334) & (0.0335) & (0.0335)\\
+Public-Sector Employer & 0.3114*** & 0.3145*** & 0.3080*** & 0.3120***\\
+ & (0.0788) & (0.0788) & (0.0789) & (0.0789)\\
+Years of Tenure & -0.0076 & -0.0091 & -0.0077 & -0.0091\\
+ & (0.0047) & (0.0047) & (0.0047) & (0.0047)\\
+\hline\noalign{\vskip -0.1ex}
+\addlinespace
+Pseudo-Observations & 658624 & 658624 & 658624 & 658624\\
+Observations & 49643 & 49643 & 49643 & 49643\\
+Number of Individuals & 9368 & 9368 & 9368 & 9368\\
+Pseudo R-Squared & 0.6249 & 0.6259 & 0.625 & 0.6259\\
+Log conditional Likelihood & -104200.4 & -103934.88 & -104170.67 & -103920.11\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item[1] All coefficients are expressed in log-odds. Standard errors clustered at the individual level are reported in parentheses.
+\item[2] Expanded through BUC-OLOGIT estimation (Baetschmann et al., 2020).
+\item[3] Observations with multiple positive outcomes within groups are excluded due to identification constraints.
+\item[4] All models control for industry, occupational category, firm region, and firm size.
+\item[5] * p<0.05, ** p<0.01,  *** p<0.001
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}

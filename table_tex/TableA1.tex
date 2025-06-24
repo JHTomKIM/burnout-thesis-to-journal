@@ -1,0 +1,58 @@
+
+\begin{landscape}\begingroup\fontsize{11}{13}\selectfont
+
+\begin{ThreePartTable}
+\begin{TableNotes}
+\item[1] In the description column, the code of original variables from raw data below each cell is inscribed to specify how variables are defined in this study.
+\end{TableNotes}
+\begin{longtable}[t]{ll>{\raggedright\arraybackslash}m{12.5cm}}
+\caption{Definition of Variables (KLIPS)}\\
+\toprule
+Name of Variable & Type & Description\\
+\midrule
+\endfirsthead
+\caption[]{Definition of Variables (KLIPS) \textit{(continued)}}\\
+\toprule
+Name of Variable & Type & Description\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\insertTableNotes
+\endlastfoot
+\cellcolor{gray!10}{Time-Invariant} & \cellcolor{gray!10}{} & \cellcolor{gray!10}{}\\
+\hline\noalign{\vskip -0.1ex}
+Female & Nominal (Dummy, 0/1) & =1 if individual is female (p\_0101)\\
+\hline\noalign{\vskip -0.1ex}
+\cellcolor{gray!10}{Time-Variant} & \cellcolor{gray!10}{} & \cellcolor{gray!10}{}\\
+\hline\noalign{\vskip -0.1ex}
+Job Satisfaction & Ordinal (21 bins) & Averaged scores of five subcomponents in job satisfaction with 5-likert scale (p\_4311, p\_4313, p\_4314, p\_4315, p\_4317)\\
+\cellcolor{gray!10}{Weekly Working Hours} & \cellcolor{gray!10}{Continuous} & \cellcolor{gray!10}{Total weekly hours worked, including overtime (p\_1004, p\_1006, p\_1012, p\_1019).}\\
+\addlinespace
+Weekly Working Days & Discrete (1-7 Days) & Total workdays per week, including overtime days (p\_1005, p\_1007, p\_1013, p\_1019).\\
+\cellcolor{gray!10}{Daily Working Hours} & \cellcolor{gray!10}{Continuous} & \cellcolor{gray!10}{Computed as Weekly Working Hours / Working Days per Week (Derived).}\\
+Overtime Worker & Nominal (Dummy, 0/1) & =1 if total weekly working hours exceed the legal threshold of 40 hours\\
+\cellcolor{gray!10}{Hourly Wage} & \cellcolor{gray!10}{Continuous (1,000 KRW per hour)} & \cellcolor{gray!10}{Computed as: Monthly Wage / (Weekly Working Hours x 4.3)}\\
+Monthly Wage & Continuous (10,000 KRW per Month) & Self-reported average values of monthly wage during a year of survey. (p\_1642)\\
+\addlinespace
+\cellcolor{gray!10}{Age} & \cellcolor{gray!10}{Continuous (Years)} & \cellcolor{gray!10}{Age of respondent (p\_0107)}\\
+Years of Education & Continuous (Years) & Total years of schooling completed with respect to graduation status (based on p\_0110, p\_0112)\\
+\cellcolor{gray!10}{Household Size} & \cellcolor{gray!10}{Discrete} & \cellcolor{gray!10}{Number of people in the household (h\_0150)}\\
+Marital Status & Nominal (Dummy, 0/1) & =1 if individual is currently having a spouse (based on p\_5501)\\
+\cellcolor{gray!10}{Household Income} & \cellcolor{gray!10}{Continuous (10,000 KRW per Month)} & \cellcolor{gray!10}{Household income excluding labor income (sum of h\_2204, h\_2206, h\_2208, h\_2210, h\_2212 without missing values)}\\
+\addlinespace
+Temporary Contract & Nominal (Dummy, 0/1) & =1 if a fixed-term worker (p\_0501=1), meaning the employment contract specifies a set duration\\
+\cellcolor{gray!10}{Atypical Contract} & \cellcolor{gray!10}{Nominal (Dummy, 0/1)} & \cellcolor{gray!10}{=1 if employed under non-standard work arrangements, such as dispatch work (p\_0611=2), subcontracting (p\_0611=3), independent contracting (p\_0612=1), remote work (p\_0613=1), or casual (daily) work (p\_0508=1)}\\
+Paid Vacation Provided & Nominal (Dummy, 0/1) & =1 if employer offers paid vacation (p\_4105)\\
+\cellcolor{gray!10}{Public-Sector Employer} & \cellcolor{gray!10}{Nominal (Dummy, 0/1)} & \cellcolor{gray!10}{=1 if working in a public institution, government agency, or state-owned enterprise (p\_0401=3 or 5).}\\
+Years of Tenure & Continuous (Years) & Total years worked in the current job from the year of entrance (p\_0301) until the year of survey\\
+\addlinespace
+\cellcolor{gray!10}{Level of Job Skill} & \cellcolor{gray!10}{Ordinal (3 bins)} & \cellcolor{gray!10}{Categorized based on occupational classification (p\_0352): 1 = Low-skilled (service, sales, manual work), 2 = Middle-skilled (clerical, technical, machine operation), 3 = High-skilled (managers, professionals).}\\
+Industry & Nominal (16 categories) & Industry classification based on KSIC by section (p\_0341)\\
+\cellcolor{gray!10}{Size of Firm} & \cellcolor{gray!10}{Ordinal (5 bins)} & \cellcolor{gray!10}{Classifying the size of firm as a number of employed individuals except government organizations: 5\textasciitilde{}9, 10\textasciitilde{}29, 30\textasciitilde{}99, 100\textasciitilde{}299, and More or equal to 300 (p\_0402, p\_0403)}\\
+Region of Firm Location & Nominal (17 regions) & Workplace location by administrative region (p\_0311)\\*
+\end{longtable}
+\end{ThreePartTable}
+\endgroup{}
+\end{landscape}
