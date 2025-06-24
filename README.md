@@ -2,6 +2,8 @@
 
 This repository contains the LaTeX source files, data processing scripts, and analysis outputs for revising the master's thesis into a journal article.
 
+![Status]https://github.com/users/JHTomKIM/projects/1
+
 ## Project Structure
 
 - `main.tex`, `reference.bib`  
