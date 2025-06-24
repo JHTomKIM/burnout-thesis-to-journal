@@ -1,33 +1,39 @@
 폴더 PATH의 목록입니다.
 볼륨 일련 번호는 7E60-2FF3입니다.
 C:.
-    000010.png
-    00001e.PNG
-    00003e.png
-    000066.png
-    2009~2017.csv
-    2018~2020.csv
-    2021~2023.csv
-    DAG.png
-    data_cleaning_analysis.do
-    Figure.png
-    file_list.txt
-    final_data.dta
-    final_data_lsr.dta
-    Graph_working hour(week).png
-    Individual overwork decision.PNG
-    Labor_Shortage_Data.csv
-    lbs.csv
-    lbs.dta
-    lbs.png
-    lbs_average.dta
-    lbs_average_tot.dta
-    lbs_cluster.dta
-    main.tex
-    plot_clustering_process.R
-    README.md
-    reference.bib
-    Share of Compliance.png
-    
-
-에 하위 폴더가 없습니다.
+│  file_list.txt
+│  main.tex
+│  README.md
+│  reference.bib
+│  
+├─data
+│      2009~2017.csv
+│      2018~2020.csv
+│      2021~2023.csv
+│      final_data.dta
+│      final_data_lsr.dta
+│      Labor_Shortage_Data.csv
+│      lbs.csv
+│      lbs.dta
+│      lbs_average.dta
+│      lbs_average_tot.dta
+│      lbs_cluster.dta
+│      
+├─do
+│      data_cleaning_analysis.do
+│      
+├─figure
+│      000010.png
+│      00001e.PNG
+│      00003e.png
+│      000066.png
+│      DAG.png
+│      Figure.png
+│      Graph_working hour(week).png
+│      Individual overwork decision.PNG
+│      lbs.png
+│      Share of Compliance.png
+│      
+└─R
+        plot_clustering_process.R
+        
