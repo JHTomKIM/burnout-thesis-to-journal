@@ -1,0 +1,17 @@
+﻿KSIC,Code of Industry,Name of Industry (Section)
+C,100,Manufacturing
+D,350,"Electricity, gas, steam and air conditioning supply"
+E,370,"Water supply; sewage, waste management, materials recovery"
+F,410,Construction
+G,450,Wholesale and retail trade
+H,490,Transportation and storage
+I,550,Accommodation and food service activities
+J,580,Information and communication
+K,640,Financial and insurance activities
+L,680,Real estate activities
+M,700,"Professional, scientific and technical activities"
+N,740,Business facilities management and business support services; rental and leasing activities
+P,850,Education
+Q,860,Human health and social work activities
+R,900,"Arts, sports and recreation related services"
+S,940,"Membership organizations, repair and other personal services"

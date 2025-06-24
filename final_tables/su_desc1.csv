@@ -1,0 +1,28 @@
+Variable,Non-Overtime Worker,Overtime Worker,Total
+Level of Job Skill,NA,NA,NA
+- low-skilled,6494,4680,11174
+NA,[18.29],[27.67],[21.32]
+- middle-skilled,17685,8913,26598
+NA,[49.81],[52.71],[50.74]
+- high-skilled,11328,3318,14646
+NA,[31.90],[19.62],[27.94]
+Size of Firm,NA,NA,NA
+ - 5 ~ 9 employees,6286,4481,10767
+NA,[17.70],[26.50],[20.54]
+ - 10 ~ 29 employees,8277,4501,12778
+NA,[23.31],[26.62],[24.38]
+ - 30 ~ 99 employees,7397,3332,10729
+NA,[20.83],[19.70],[20.47]
+ - 100 ~ 299 employees,4316,1829,6145
+NA,[12.16],[10.82],[11.72]
+- 300 or more employees,9231,2768,11999
+NA,[26.00],[16.37],[22.89]
+Region of Firm Location,NA,NA,NA
+- capital area,18215,7718,25933
+NA,[51.30],[45.64],[49.47]
+- metropolitan cities,9066,4731,13797
+NA,[25.53],[27.98],[26.32]
+- other provinces,8226,4462,12688
+NA,[23.17],[26.39],[24.21]
+Observations,35507,16911,52418
+NA,[100],[100],[100]

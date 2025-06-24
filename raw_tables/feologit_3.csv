@@ -1,0 +1,54 @@
+
+="",="(1)"
+="",="Job Satisfaction"
+
+="Overtime Worker (=1 for Weekly Overtime working)=1 # Working Hours (Per a Week)",="-0.0020*"
+="",="(0.0009)"
+
+="Working Hours (Per a Week)",="0.0550***"
+="",="(0.0080)"
+
+="Working Hours (Per a Week) # Working Hours (Per a Week)",="-0.0006***"
+="",="(0.0001)"
+
+="Wage rate (Per a Hour, 1000 Won)",="0.0511***"
+="",="(0.0044)"
+
+="Age",="0.0016"
+="",="(0.0053)"
+
+="Years of Education",="-0.1034"
+="",="(0.0570)"
+
+="Number of Household Members",="-0.0683**"
+="",="(0.0242)"
+
+="Marital Status (=1 for having a spouse)",="0.1339"
+="",="(0.0700)"
+
+="Monthly Income of Household (Except Labor Income)",="0.0002"
+="",="(0.0002)"
+
+="Temporary Contract",="-0.1251**"
+="",="(0.0386)"
+
+="Atypical Contract",="-0.2936***"
+="",="(0.0545)"
+
+="Paid Vacation Offerance",="0.2929***"
+="",="(0.0333)"
+
+="Public employee (=1 for Public Worker)",="0.3356***"
+="",="(0.0779)"
+
+="Year of Tenure",="-0.0072"
+="",="(0.0047)"
+
+="Observations",="658624"
+="N_true",="5.0e+04"
+="N_group",="9.4e+03"
+="r2_p",="0.6249"
+="ll",="-1.0e+05"
+
+="Standard errors in parentheses"
+="* p<0.05, ** p<0.01, *** p<0.001"
