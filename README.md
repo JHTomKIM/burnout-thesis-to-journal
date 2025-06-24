@@ -30,6 +30,9 @@ This repository contains the LaTeX source files, data processing scripts, and an
 
 - **Data License**: Raw KLIPS & OLFSE data and processed `.dta` files are not publicly available due to licensing restrictions. Scripts can be used to reproduce the panel dataset if the user has access to KLIPS data.
 
+- *KLIPS* : https://www.kli.re.kr/board.es?mid=a40104000000&bid=0016&act=view&list_no=145316&tag=&nPage=1
+- *OLFSE* : https://laborstat.moel.go.kr/hmp/tblInfo/TblInfoList.do?menuId=0010001100101102&leftMenuId=0010001100101&bbsId=
+
 - **Weights**: Weight variables are included for consistency, but not used in the analysis.
 
 ## Revision History
