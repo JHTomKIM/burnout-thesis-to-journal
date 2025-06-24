@@ -4,6 +4,8 @@ This repository contains the LaTeX source files, data processing scripts, and an
 
 [Journal Submission Workflow (GitHub Project Board)](https://github.com/users/JHTomKIM/projects/1)
 
+![Status](https://img.shields.io/badge/Status-Preparing%20for%20Submission-yellow)
+
 ## Project Structure
 
 - `main.tex`, `reference.bib`  
