@@ -1,10 +1,10 @@
 # Burnout from Overwork: Job Disutility under Industrial Labor Shortage
 
+![Status](https://img.shields.io/badge/Status-Preparing%20for%20Submission-yellow)
+
 This repository contains the LaTeX source files, data processing scripts, and analysis outputs for revising the master's thesis into a journal article.
 
 [Journal Submission Workflow (GitHub Project Board)](https://github.com/users/JHTomKIM/projects/1)
-
-![Status](https://img.shields.io/badge/Status-Preparing%20for%20Submission-yellow)
 
 ## Project Structure
 
