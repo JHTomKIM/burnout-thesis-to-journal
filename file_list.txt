@@ -34,6 +34,47 @@ C:.
 ¦¢      lbs.png
 ¦¢      Share of Compliance.png
 ¦¢      
-¦¦¦¡R
-        plot_clustering_process.R
+¦§¦¡final_tables
+¦¢      est0.csv
+¦¢      est00.csv
+¦¢      est10.csv
+¦¢      est2.csv
+¦¢      est3.csv
+¦¢      est5.csv
+¦¢      est_cl.csv
+¦¢      est_cl_00.csv
+¦¢      History of working hour regulations.csv
+¦¢      iv_result.csv
+¦¢      KSIC.csv
+¦¢      summary_js.csv
+¦¢      su_demo1.csv
+¦¢      su_desc1.csv
+¦¢      su_desc2.csv
+¦¢      su_work1.csv
+¦¢      variable.csv
+¦¢      working hour distribution.csv
+¦¢      
+¦§¦¡R
+¦¢      plot_clustering_process.R
+¦¢      
+¦¦¦¡raw_tables
+        comparison.csv
+        detailed_comparison.csv
+        detailed_comparison_1.csv
+        detailed_dummy_comparison.csv
+        feologit.csv
+        feologitr.csv
+        feologit_3.csv
+        feologit_general.csv
+        fullyquad_1.csv
+        fullyquad_3.csv
+        lbsresultcluster.csv
+        lbsresult_.csv
+        simple2SPS.csv
+        stage1.1.csv
+        stage1_.csv
+        stage1_cluster.csv
+        stage1_cluster_int.csv
+        stage1_comparison.csv
+        stage1_comparison_.csv
         
