@@ -1172,6 +1172,40 @@ lab var cluster "Clustered Classfication of industies based on LSR"
 
 save "D:\THESIS\Impact of working hours on burn-out syndrome\Data set\final_data_lsr.dta", replace
 
+* 98표본, 09표본, 18표본 Classfication
+
+cd "C:\Users\joong\OneDrive\문서\GitHub\burnout-thesis-to-journal\data"
+
+merge 1:1 pid year using "sample_origin.dta"
+
+keep if _merge == 3
+
+save "final_data_lsr.dta", replace
+
+* 09표본 기준 원가구, 분가가구, 조사대상 아님 (+18년도에 추가 표본 구축)
+
+eststo clear
+
+table year sample09
+
+collect export "sample09_year.tex", replace
+
+eststo clear
+
+table year sample18
+
+collect export using "sample18_year.tex", replace
+
+// - 09통합표본은 2009년 조사 당시 추가표집된 1,415가구를 포함하여, 당해연도 응답 가구(6,721가구) 전체를 원가구로 하는 표본을 의미한다.
+// - 09통합표본은 2009년(12차년도)에 기존 조사대상가구 중 당해연도 응답가구인
+// - 5,306가구(98표본 원가구(3,658가구) + 98표본 분가가구(1,648가구))와 추가 표집된 가구인 1,415가구를 더한 6,721가구를 원가구로 하는 표본이다.
+// - 18통합표본가구에는 98원표본과 09통합패널이 다수 포함되어 있지만, 2018년 당시 응답하지 않고, 2019년 이후 다시 응답한 98표본, 09통합표본은 포함되지 않으므로, 사용에 주의가 요구된다.
+// - 18통합패널 원년인 2018년도 당시 응답하지 않고, 이후에 응답하여 18통합표본에는 포함되지 않지만, 98표본에는 포함되는 가구를 찾는 방법은 다음과 같다.
+// (sample98=1 or sample98=2) and sample18=3
+// - 이들 가구는 기본적으로 98표본이지만, 18통합표본은 아니므로, 98표본 가중치는 있지만, 18통합표본 가중치는 주어지지 않는다.
+// 18통합패널 원년인 2018년도 당시 응답하지 않고, 이후에 응답하여 18통합표본에는 포함되지 않지만, 09통합표본에는 포함되는 가구를 찾는 방법은 다음과 같다.
+// (sample09=1 or sample09=2) and sample18=3, 이들 가구는 기본적으로 09통합표본이지만, 18통합표본은 아니므로, 09통합표본 가중치는 있지만, 18통합표본 가중치는 주어지지 않는다.
+
 * Aggregated Job Satisfaction by Weekly Working Hours (Figure 4)
 
 twoway (fpfitci js_composite worktime, xtitle(Total Working Hours per a Week) ytitle(Level of Job Satisfaction) legend(pos(12) row(1)) xline(40) estopts(vce(cl pid)))
