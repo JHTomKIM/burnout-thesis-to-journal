@@ -1194,7 +1194,7 @@ eststo clear
 
 table year sample18
 
-collect export using "sample18_year.tex", replace
+collect export "sample18_year.tex", replace
 
 // - 09통합표본은 2009년 조사 당시 추가표집된 1,415가구를 포함하여, 당해연도 응답 가구(6,721가구) 전체를 원가구로 하는 표본을 의미한다.
 // - 09통합표본은 2009년(12차년도)에 기존 조사대상가구 중 당해연도 응답가구인
@@ -1220,6 +1220,19 @@ esttab using "C:\Users\joong\OneDrive\바탕 화면\THESIS\Impact of working hou
 
 eststo clear
 
+* T-Test Summary Table (2025.07.21)
+
+** Household
+
+foreach household in age female edu_scale number_household spouse_exist nonlaborinc_mon { 
+	
+	estpost ttest `household', by(worktime_40) unequal
+	eststo `household'
+	
+}
+
+esttab using "ttest_household.csv", cells("b(fmt(3)) se(fmt(3) par) p(fmt(3))") label star(* 0.05 ** 0.01 *** 0.001) noobs nonum long unstack replace
+
 * Summary Statistics of Labor Characteristics (Table 4)
 
 eststo clear
@@ -1228,9 +1241,41 @@ estpost tabstat js_composite worktime workday workhour wage_h wage_mon paid_vac 
 
 esttab using "C:\Users\joong\OneDrive\바탕 화면\THESIS\Impact of working hours on burn-out syndrome\summary_work.csv", main(mean) aux(sd) unstack nonumber brackets label replace
 
+eststo clear
+
+* T-Test Summary Table (2025.07.21)
+
+** Labor characteristics
+
+foreach labor in js_composite worktime workday workhour wage_h wage_mon paid_vac pub_soc foe11 foe13 tenured_years labor_shortage_rate { 
+	
+	estpost ttest `labor', by(worktime_40) unequal
+	eststo `labor'
+	
+}
+
+esttab using "ttest_labor.csv", cells("b(fmt(3)) se(fmt(3) par) p(fmt(3))") label star(* 0.05 ** 0.01 *** 0.001) noobs nonum long unstack replace
+
 * Descriptive Statistics of Working Schedules (Table 5)
 
 table workday worktime_40, stat(sd workhour) nformat(%5.4f)
+
+* T-Test Summary Table (2025.07.21)
+
+** Daily working hours per weekly working days
+
+eststo clear
+
+forvalues d = 3/7 {
+	
+	estpost ttest workhour if workday == `d', by(worktime_40) unequal
+	eststo workhour`d'
+
+}
+
+ttest workhour, by(worktime_40) unequal
+
+esttab using "ttest_workhour.csv", cells("b(fmt(3)) se(fmt(3) par) p(fmt(3))") label star(* 0.05 ** 0.01 *** 0.001) noobs nonum long unstack replace
 
 * Descriptive Statistics of Working Environment (Table 6)
 
@@ -1256,6 +1301,19 @@ estpost tabstat js_*, by(worktime_40) statistics(mean sd) column(statistics) lis
 
 esttab using "C:\Users\joong\OneDrive\바탕 화면\THESIS\Impact of working hours on burn-out syndrome\summary_js.csv", main(mean) aux(sd) unstack nonumber brackets label replace
 
+eststo clear
+
+foreach job in js_composite js_reward js_value js_workenvironment js_community js_worktime { 
+	
+	estpost ttest `job', by(worktime_40) unequal
+	eststo `job'
+	
+}
+
+esttab using "ttest_job.csv", cells("b(fmt(3)) se(fmt(3) par) p(fmt(3))") label star(* 0.05 ** 0.01 *** 0.001) noobs nonum long unstack replace
+
+xtset pid year, yearly
+
 * Effects of Industrial Labor Shortage on Working Hour Decisions (Equation 4.1) (Table 8)
 
 reghdfe worktime labor_shortage_rate wage_h age edu_scale number_household spouse_exist nonlaborinc_mon foe11 foe13 paid_vac pub_soc tenured_years, absorb(i.pid i.job i.industry i.fsize i.address) vce(cl pid)
@@ -1274,6 +1332,10 @@ reghdfe worktime_40 labor_shortage_rate wage_h age edu_scale number_household sp
 
 eststo reghdfe4
 
+* 초과근로 참여 확률 로짓으로 변경 (07.21/2025) => Perfect Prediction 문제로 샘플 절반 가량이 누락되는 문제
+
+xtlogit worktime_40 labor_shortage_rate wage_h age edu_scale number_household spouse_exist nonlaborinc_mon foe11 foe13 paid_vac pub_soc tenured_years i.job i.industry i.fsize i.address, fe
+
 esttab reghdfe1 reghdfe2 reghdfe3 reghdfe4 using "D:\THESIS\Impact of working hours on burn-out syndrome\Data set\stage1_comparison.csv", replace se scalars(N_group r2 F) unstack b(%5.4f) se(%5.4f) nomtitle label
 
 * Effects of Labor Shortage Cluster Group on Working Hour Decisions (Equation 4.2) (Table 9)
@@ -1289,6 +1351,8 @@ eststo cmodel2
 reghdfe workday i.cluster wage_h age edu_scale number_household spouse_exist nonlaborinc_mon foe11 foe13 paid_vac pub_soc tenured_years, absorb(i.pid i.job i.fsize i.address) vce(cl pid)
 
 eststo cmodel3
+
+* 초과근로 참여 확률 로짓으로 변경 (07.21/2025) => Perfect Prediction 문제로 샘플 절반 가량이 누락되는 문제
 
 reghdfe worktime_40 i.cluster wage_h age edu_scale number_household spouse_exist nonlaborinc_mon foe11 foe13 paid_vac pub_soc tenured_years, absorb(i.pid i.job i.fsize i.address) vce(cl pid)
 
@@ -1309,6 +1373,8 @@ eststo cmodel2_int
 reghdfe workday i.cluster#c.labor_shortage_rate wage_h age edu_scale number_household spouse_exist nonlaborinc_mon foe11 foe13 paid_vac pub_soc tenured_years, absorb(i.pid i.job i.fsize i.address) vce(cl pid)
 
 eststo cmodel3_int
+
+* 초과근로 참여 확률 로짓으로 변경 (07.21/2025) => Perfect Prediction 문제로 샘플 절반 가량이 누락되는 문제
 
 reghdfe worktime_40 i.cluster#c.labor_shortage_rate wage_h age edu_scale number_household spouse_exist nonlaborinc_mon foe11 foe13 paid_vac pub_soc tenured_years, absorb(i.pid i.job i.fsize i.address) vce(cl pid)
 

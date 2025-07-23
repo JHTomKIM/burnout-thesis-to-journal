@@ -1,0 +1,153 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  12pt,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{setspace}
+\usepackage{newtxtext}
+\doublespacing
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{pdflscape}
+\newcommand{\blandscape}{\begin{landscape}}
+\newcommand{\elandscape}{\end{landscape}}
+\usepackage{afterpage}
+\usepackage{chngcntr}
+\counterwithout{figure}{section}
+\counterwithout{table}{section}
+\renewcommand{\contentsname}{}
+\renewcommand{\listtablename}{}
+\renewcommand{\listfigurename}{}
+\usepackage{etoolbox}
+\usepackage{tocloft}
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\large\bfseries\filcenter}{\thesection}{1em}{\MakeUppercase}
+\titleformat*{\section}{\normalfont\large\bfseries\filcenter\MakeUppercase}
+\titlespacing*{\section}{0pt}{*3}{*2}
+\renewcommand{\cftsecnumwidth}{2em}
+\renewcommand{\cftsubsecnumwidth}{2em}
+\setlength{\skip\footins}{20pt}
+\usepackage[style=apa, backend=biber]{biblatex}
+\usepackage{url}
+\usepackage{parskip}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{2em}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[justification=centering]{caption}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage{bookmark}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{ulem}
+\usepackage[table]{xcolor}
+\begin{document}
+\begin{table}[!h]
+\centering\centering
+\caption{Summary Statistics of Demographic Characteristics}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{11}{13}\selectfont
+\begin{threeparttable}
+\begin{tabular}[t]{lcccc}
+\toprule
+Variable & Non-Overtime & Overtime & Total & Difference \\
+\midrule
+Age & 42.70 & 43.42 & 42.93 & -0.723*** \\
+& [11.12] & [11.22] & [11.16] & (0.105)
+ & \\
+Female Ratio & 0.463 & 0.326 & 0.418 & 0.137*** \\
+& [0.499] & [0.469] & [0.493] & (0.004)
+ & \\
+Years of Education & 13.93 & 12.91 & 13.60 & 1.020*** \\
+& [2.617] & [2.678] & [2.680] & (0.025)
+ & \\
+Household Size & 3.244 & 3.164 & 3.218 & 0.080*** \\
+& [1.163] & [1.228] & [1.185] & (0.011)
+ & \\
+Marital Status & 0.693 & 0.667 & 0.684 & 0.025*** \\
+& [0.461] & [0.471] & [0.465] & (0.004)
+ & \\
+Household Income & 23.11 & 17.30 & 21.23 & 5.812*** \\
+& [78.25] & [62.27] & [73.52] & (0.634)
+ & \\
+\hline\noalign{\vskip -0.1ex}
+Observations & 35,507 & 16,911 & 52,418 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item[1] Standard deviations are in brackets. Standard errors for group differences are in parentheses. Differences are based on unequal-variance two-sample t-tests.
+\item[2] *** p\textless0.001, ** p\textless0.01, * p\textless0.05
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\end{document}

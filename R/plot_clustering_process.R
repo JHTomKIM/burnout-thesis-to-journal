@@ -6,7 +6,7 @@ library(tidyverse)
 library(cluster)
 library(factoextra)
 
-lbs<- read_dta("lbs_average_1.dta")
+lbs<- read_dta("lbs_average.dta")
 
 lbs_c <- read_dta("lbs_cluster.dta")
 lbs_t <- read_dta("lbs_average_tot.dta")
@@ -14,7 +14,16 @@ lbs_t <- read_dta("lbs_average_tot.dta")
 ggplot(lbs_c, aes(x = year, y = lbs_average,  color = factor(cluster, levels = c(2, 4, 1, 3)))) +
   geom_line(alpha = 1, size = 1, linetype = "dashed") +
   geom_line(data = subset(lbs_t, industry == 0), aes(x = year, y = lbs_average), 
-            color = "black", alpha = 1, size = 1.5) +
+            color = "black", alpha = 1, size = 1) +
+  geom_label(data = lbs_c,
+             aes(label = round(lbs_average, 1)),
+             size = 2.8,
+             fill = "white",         
+             alpha = 1,            
+             label.size = NA,        
+             label.padding = unit(0.1, "lines"),  
+             vjust = -0.5,
+             show.legend = FALSE) +
   labs(x = "Year", y = "Average in Labor Shortage Rate (%)") +
   theme_minimal()+
   scale_color_manual(
